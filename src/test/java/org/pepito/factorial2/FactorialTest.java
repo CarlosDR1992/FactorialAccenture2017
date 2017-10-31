@@ -52,4 +52,9 @@ public class FactorialTest {
 
 		assertEquals(expectedValue, result);
 	}
+	
+	@Test(expected = RuntimeException.class)
+	public void shouldFactorialOfNefativeNumberRaiseAnException() {
+		factorial.compute(-1);
+	}
 }
