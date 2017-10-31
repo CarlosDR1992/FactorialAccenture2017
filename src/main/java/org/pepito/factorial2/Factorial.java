@@ -8,12 +8,14 @@ package org.pepito.factorial2;
 public class Factorial {
 
 	public long compute(long valor) {
+		long result;
 		if (valor < 0) {
 			throw new RuntimeException("The value is negative: " + valor);
 		} else if (valor == 0 || valor == 1) {
-			return 1;
+			result = 1;
 		} else {
-			return valor * compute(valor - 1);
-		}
+			result = valor * compute(valor - 1);
+		} 
+		return result;
 	}
 }
